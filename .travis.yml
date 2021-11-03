@@ -5,14 +5,14 @@ services:
   - docker
 
 before_install:
-  - docker build -t complex -f ./client/Dockerfile.dev ./client
+  - docker build -t sumanthgowda/complex -f ./client/Dockerfile.dev ./client
 # script:
 #   - docker run sumanth/dockernodereact npm test -- --coverage
 after_success:
-  - docker build -t multiclient ./client
-  - docker build -t multinginx ./nginx
-  - docker build -t multiserver ./server
-  - docker build -t multiworker ./worker
+  - docker build -t sumanthgowda/multiclient ./client
+  - docker build -t sumanthgowda/multinginx ./nginx
+  - docker build -t sumanthgowda/multiserver ./server
+  - docker build -t sumanthgowda/multiworker ./worker
 
   #log in to docker cli
 
