@@ -16,7 +16,7 @@ after_success:
 
   #log in to docker cli
 
-  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin docker.io
+  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push sumanthgowda/multiclient
   - docker push sumanthgowda/multinginx
