@@ -18,7 +18,7 @@ after_success:
 
   - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push sumanthgowda/multiclient:sumanth/multiclient
-  - docker push sumanthgowda/multinginx:sumanth/multinginx
-  - docker push sumanthgowda/multiserver:sumanth/multiserver
-  - docker push sumanthgowda/multiworker:sumanth/multiworker
+  - docker push sumanth/multiclient
+  - docker push sumanth/multinginx
+  - docker push sumanth/multiserver
+  - docker push sumanth/multiworker
