@@ -32,7 +32,10 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-2-033521689035"
   bucket_path: "complex"
   on:
-    branch:master
+    branches:    # ← new!
+      only:      # ← new!
+        - master # ← new!
+  skip_cleanup: true
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
 
