@@ -1,32 +1,32 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "ContainerDefnitions":[
+    "AWSEBDockerrunVersion": "1",
+    "containerDefinitions":[
         {
             "name":"client",
-            "Image":"sumanthgowda/multiclient",
+            "image":"sumanthgowda/multiclient",
             "hostname":"client",
-            "essentil":false,
+            "essential":false,
             "memory":128
         },
         {
             "name":"server",
-            "Image":"sumanthgowda/multiserver",
+            "image":"sumanthgowda/multiserver",
             "hostname":"api",
-            "essentil":false,
+            "essential":false,
             "memory":128
         },
         {
             "name":"worker",
-            "Image":"sumanthgowda/multiworker",
+            "image":"sumanthgowda/multiworker",
             "hostname":"worker",
-            "essentil":false,
+            "essential":false,
             "memory":128
         },
         {
             "name":"nginx",
-            "Image":"sumanthgowda/multinginx",
+            "image":"sumanthgowda/multinginx",
             "hostname":"nginx",
-            "essentil":true,
+            "essential":true,
             "memory":128,
             "portMappings":[{
                 "hostPort":80,
